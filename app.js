@@ -12,7 +12,7 @@ const notFound = require('./middleware/notFound')
 app.use(cors())
 app.use(express.json());
 app.get('/',(req,res)=> {
-    console.log('API is working...')
+    res.send('API is working...')
 })
 app.use('/api/v1',[usersRouter,authRouter])
 app.use(notFound)
